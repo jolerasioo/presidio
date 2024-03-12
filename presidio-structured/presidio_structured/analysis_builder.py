@@ -156,28 +156,28 @@ class PandasAnalysisBuilder(TabularAnalysisBuilder):
 
     def generate_analysis(
         self,
-        df: DataFrame,
+        data: DataFrame,
         n: Optional[int] = None,
         language: str = "en",
     ) -> StructuredAnalysis:
         """
         Generate a configuration from the given tabular data.
 
-        :param df: The input tabular data (dataframe).
+        :param data: The input tabular data (DataFrame).
         :param n: The number of samples to be taken from the dataframe.
         :param language: The language to be used for analysis.
         :return: A StructuredAnalysis object containing the analysis results.
         """
         if not n:
-            n = len(df)
-        elif n > len(df):
+            n = len(data)
+        elif n > len(data):
             logger.debug(
                 f"Number of samples ({n}) is larger than the number of rows \
-                    ({len(df)}), using all rows"
+                    ({len(data)}), using all rows"
             )
-            n = len(df)
+            n = len(data)
 
-        df = df.sample(n, random_state=123)
+        df = data.sample(n, random_state=123)
 
         key_recognizer_result_map = self._generate_key_rec_results_map(df, language)
 
