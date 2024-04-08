@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "APP_KIND": "workflowapp",
+    "ProjectDirectoryPath": "c:\\Users\\josealonso\\source\\repos\\cs_training\\projects\\presidio",
+    "FUNCTIONS_WORKER_RUNTIME": "node"
+  }
+}
