@@ -68,6 +68,7 @@ For more information, refer to the [adding new recognizers documentation](analyz
 |FieldType|Description|Detection Method|
 |--- |--- |--- |
 |SG_NRIC_FIN| A National Registration Identification Card | Pattern match and context |
+|SG_UEN| A Unique Entity Number (UEN) is a standard identification number for entities registered in Singapore. | Pattern match, context, and checksum |
 
 ### Australia
 
@@ -77,6 +78,13 @@ For more information, refer to the [adding new recognizers documentation](analyz
 |AU_ACN| An Australian Company Number is a unique nine-digit number issued by the Australian Securities and Investments Commission to every company registered under the Commonwealth Corporations Act 2001 as an identifier. | Pattern match, context, and checksum |
 |AU_TFN| The tax file number (TFN) is a unique identifier issued by the Australian Taxation Office to each taxpaying entity | Pattern match, context, and checksum |
 |AU_MEDICARE| Medicare number is a unique identifier issued by Australian Government that enables the cardholder to receive a rebates of medical expenses under Australia's Medicare system| Pattern match, context, and checksum |
+
+### India
+| FieldType  | Description                                                                                                                                                         |Detection Method|
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|--- |
+| IN_PAN     | The Indian Permanent Account Number (PAN) is a unique 12 character alphanumeric identifier issued to all business and individual entities registered as Tax Payers. | Pattern match, context |
+| IN_AADHAAR | Indian government issued unique 12 digit individual identity number                                                                                                 | Pattern match, context, and checksum |
+| IN_VEHICLE_REGISTRATION | Indian government issued transport (govt, personal, diplomatic, defence)  vehicle registration number                                                               | Pattern match, context, and checksum |
 
 ## Adding a custom PII entity
 
